@@ -1,4 +1,4 @@
-package go_curl
+package main
 
 import (
 	"os"
