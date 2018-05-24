@@ -11,7 +11,7 @@ func main(){
 	for _, url := range os.Args[1:] {
 		resp, error := http.Get(url)
 		if error != nil {
-			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
+			fmt.Fprintf(os.Stderr, "fetch: %v\n", error)
 			os.Exit(1)
 		}
 		b, err := ioutil.ReadAll(resp.Body)
